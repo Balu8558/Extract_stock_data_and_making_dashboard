@@ -36,7 +36,9 @@ pip install bs4
 pip install nbformat
 pip install --upgrade plotly
 
-📊 Project Workflow
+---
+
+# 📊 Project Workflow
 🔹 Step 1: Define Graphing Function
 
 A reusable function make_graph() is defined to plot:
