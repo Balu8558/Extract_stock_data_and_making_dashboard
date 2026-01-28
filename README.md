@@ -7,7 +7,7 @@ In this project, stock price data and revenue data are extracted for **Tesla** a
 ---
 
 ## 📚 Table of Contents
-1. Define a Function that Makes a Graph  
+1. Define a Function that Makes a Graph 
 2. Question 1: Use yfinance to Extract Stock Data  
 3. Question 2: Use Web Scraping to Extract Tesla Revenue Data  
 4. Question 3: Use yfinance to Extract Stock Data  
