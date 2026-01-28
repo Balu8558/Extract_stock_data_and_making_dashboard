@@ -38,89 +38,73 @@ pip install --upgrade plotly
 
 ---
 
+
 # 📊 Project Workflow
-🔹 Step 1: Define Graphing Function
 
-A reusable function make_graph() is defined to plot:
 
-Historical Stock Prices
-
-Historical Revenue
+## 🔹 Step 1: Define Graphing Function
+A reusable function `make_graph()` is defined to plot:
+- Historical Stock Prices  
+- Historical Revenue  
 
 The function accepts:
+- Stock price DataFrame (`Date`, `Close`)  
+- Revenue DataFrame (`Date`, `Revenue`)  
+- Stock name (used as the graph title)
 
-Stock price DataFrame (Date, Close)
+---
 
-Revenue DataFrame (Date, Revenue)
+## 🔹 Step 2: Extract Tesla Stock Data
+- Stock data is extracted using the **yfinance** library  
+- Ticker Symbol: `TSLA`  
+- Full historical data is retrieved using `period="max"`
 
-Stock name (for graph title)
+---
 
-🔹 Step 2: Extract Tesla Stock Data
+## 🔹 Step 3: Extract Tesla Revenue Data
+- Revenue data is scraped from an HTML page using **requests** and **BeautifulSoup**  
+- Quarterly revenue data is extracted  
+- Data cleaning includes:
+  - Removing `$` symbols and commas  
+  - Converting values to numeric format  
+  - Removing null or invalid entries  
 
-Stock data is extracted using the yfinance library
+---
 
-Ticker Symbol: TSLA
+## 🔹 Step 4: Extract GameStop Stock Data
+- Stock data is extracted using **yfinance**  
+- Ticker Symbol: `GME`  
+- Full historical stock price data is collected  
 
-Full historical data is retrieved using period="max"
+---
 
-🔹 Step 3: Extract Tesla Revenue Data
+## 🔹 Step 5: Extract GameStop Revenue Data
+- Revenue data is scraped using **BeautifulSoup**  
+- Quarterly revenue table is extracted  
+- Data is cleaned and converted to numeric values  
 
-Revenue data is scraped from an HTML page using requests and BeautifulSoup
+---
 
-Quarterly revenue data is extracted
+## 🔹 Step 6: Data Visualization
+- Interactive graphs are created using **Plotly**  
+- Each dashboard contains:
+  - Top panel: Historical Share Price  
+  - Bottom panel: Historical Revenue  
+- Graphs display data up to **June 2021**
 
-Data cleaning includes:
+---
 
-Removing $ and commas
+## 📈 Visualizations Generated
+- Tesla Stock Price vs Revenue Graph  
+- GameStop Stock Price vs Revenue Graph  
 
-Converting data to numeric format
+Each visualization is interactive and includes a date range slider for improved analysis.
 
-Removing null or invalid entries
+---
 
-🔹 Step 4: Extract GameStop Stock Data
-
-Stock data is extracted using yfinance
-
-Ticker Symbol: GME
-
-Full historical stock price data is collected
-
-🔹 Step 5: Extract GameStop Revenue Data
-
-Revenue data is scraped using BeautifulSoup
-
-Quarterly revenue table is extracted
-
-Data is cleaned and converted to numeric values
-
-🔹 Step 6: Data Visualization
-
-Interactive graphs are created using Plotly
-
-Each dashboard contains:
-
-Top panel: Historical Share Price
-
-Bottom panel: Historical Revenue
-
-Graphs display data up to June 2021
-
-📈 Visualizations Generated
-
-Tesla Stock Price vs Revenue Graph
-
-GameStop Stock Price vs Revenue Graph
-
-Each visualization is interactive and includes a date range slider for better analysis.
-
-🎯 Key Learnings
-
-Extracting financial data using APIs
-
-Web scraping structured data from HTML pages
-
-Data cleaning and preprocessing
-
-Creating interactive dashboards using Plotly
-
-Applying end-to-end data science workflow
+## 🎯 Key Learnings
+- Extracting financial data using APIs  
+- Web scraping structured data from HTML pages  
+- Data cleaning and preprocessing  
+- Creating interactive dashboards using Plotly  
+- Applying an end-to-end data science workflow  
